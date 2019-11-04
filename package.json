@@ -1,0 +1,34 @@
+{
+  "name": "@padawansoftware/spoiler.js",
+  "version": "0.1.0",
+  "description": "Library for easy creating spoilers",
+  "author": "Padawan Software",
+  "license" : "MIT",
+
+  "files" : [
+    "dist",
+    "src",
+    "test"
+  ],
+  "keywords": [
+    "spoiler"
+  ],
+  "homepage": "https://github.com/padawansoftware/spoiler.js",
+
+  "main": "dist/spoiler.js",
+
+  "scripts": {
+    "build": "webpack --colors",
+    "clean": "rm -r ./dist",
+    "pack": "npm run build && npm pack",
+    "publish": "npm run build && npm run publish --access public"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
+    "path": "^0.12.7",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

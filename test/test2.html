@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="../src/spoiler.css">
+        <style type="text/css">
+            .spoiler-content {
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script src="../src/spoiler.js"></script>
+        <script type="text/javascript">
+            var container = document.querySelector('#container');
+
+            // Example of HTML created spoiler
+            var firstSpoiler = Spoiler.createHTML({
+                'spoilerContent' : 'HTML created spoiler'
+            });
+            container.innerHTML = firstSpoiler;
+
+            // Example of DOM created spoiler
+            var secondSpoiler = Spoiler.create({
+                'spoilerContent': 'DOM created spoiler'
+            });
+            container.appendChild(secondSpoiler);
+
+            // Init spoilers
+            Spoiler.initAll();
+        </script>
+    </body>
+</html>
